@@ -80,11 +80,7 @@ def send():
     
     if not send_address or not my_address or not private_key or not amount:
         return jsonify({"error": "모든 필드를 입력해주세요."}), 400
-    
-    # 잔액 확인
-    if wallet_data_all['balance'] < amount:
-        return jsonify({"error": "잔액이 부족합니다."}), 400
-    
+        
     # 트랜잭션 추가
     new_transaction = {
         "time": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -94,7 +90,6 @@ def send():
     }
     
     # 잔액 차감
-    wallet_data_all['balance'] -= amount
     wallet_data_all['transaction'].insert(0, new_transaction)  # 더미 데이터 배열에 추가
     
     return jsonify({
