@@ -69,6 +69,7 @@ def wallet():
     return jsonify(wallet_data_all)
 
 # 송금
+@app.route('/send', methods=['POST'])
 def send():
     data = request.json
     send_address = data.get("sendAddress")
