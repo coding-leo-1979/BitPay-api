@@ -62,7 +62,7 @@ def home():
 
 # 홈
 @app.route('/wallet', methods=['POST'])
-def home():
+def wallet():
     data = request.json
     my_address = data.get("myAddress", "default_address")
     
