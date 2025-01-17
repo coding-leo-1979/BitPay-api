@@ -10,6 +10,8 @@ wallet_data = {
     "transaction": [
         {"time": "2025-01-10 10:30:00", "sender": "public123", "recipient": "1234567890", "amount": 100},
         {"time": "2025-01-12 14:00:00", "sender": "0987654321", "recipient": "public123", "amount": 200},
+        {"time": "2025-01-10 10:30:00", "sender": "public123", "recipient": "1234567890", "amount": 100},
+        {"time": "2025-01-12 14:00:00", "sender": "0987654321", "recipient": "public123", "amount": 200},
         {"time": "2025-01-12 14:00:00", "sender": "public123", "recipient": "1111111111", "amount": 200}
     ]
 }
